@@ -44,6 +44,11 @@ streamlit.dataframe(fruityvice_normalized)
 
 
 import snowflake.connector
+# Establish the connection to the Snowflake database
+snowflake_user = 'ShailajaThonupunuri'
+snowflake_password = 'S@ri252011'
+snowflake_account = 'rx25105.ca-central-1.aws'
+snowflake_client_prefetch_threads = 4
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
